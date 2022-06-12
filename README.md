@@ -1,6 +1,9 @@
   # INSTRUCTIONS:
   # FOLLOW ALL OF THESE, IF YOU GET STUCK, DM ME
   
+  ## [Click here for a video walkthrough of the setup](https://drive.google.com/file/d/1yjs5cijr0cToQk3uNuy7j6L39TNwVGVy/view?usp=sharing)
+
+  
   ## STAGE 1 - Set up your gmail account
  ##### Purpose: 
  Allow the script access to read your emails to get the verification codes. Without this, it will not function
