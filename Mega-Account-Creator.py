@@ -193,6 +193,7 @@ for email in emails:
 	print("    Getting link from email...")
 	i = 0
 	while (emailVerificationLink == '') :
+		i=i+1
 		emailVerificationLink = getVerificationCodeFromEmail(email + "@gmail.com")
 	print("    Got link!")
 	print("    Verifying account...")
