@@ -47,8 +47,8 @@
    3. In the folder this tool is in, download Megatools from your system
       Downloads can be found here: https://megatools.megous.com/builds/builds/
       Extract everything inside to the folder, and name it `megatools`
-
-   4. Open command prompt/terminal in this folder and run the two commands below:    
+   4. Create a txt file called "emails" which you can put all of the emails in
+   5. Open command prompt/terminal in this folder and run the two commands below:    
       `pip install google-api-python-client`    
       `pip install oauth2client`    
 
@@ -63,7 +63,7 @@
       All accounts share the same name. 
  2. On line 95, set the password you want to use for ALL mega accounts created
  3. On line 93, set the PATH to the megatools folder
- 4. Open `emails.txt` and add the account emails you want creating *WITHOUT* @gmail.com
+ 4. Open `emails` txt file and add the account emails you want creating *WITHOUT* @gmail.com
       Example file picture: https://i.imgur.com/zSECSzv.png
 
    5. Run the script `python Mega-Account-Creator.py` in the terminal
