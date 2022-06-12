@@ -39,12 +39,13 @@
 
 
 ## STAGE 2 - Set up your system
-   1. Install the latest Python if you don't have it already
-   2. In the folder this tool is in, download Megatools from your system
+   1. Download [this file](https://raw.githubusercontent.com/Troubled-Mind/Account-Creator/main/Mega-Account-Creator.py) and put it in a folder you can easily access
+   2. Install the latest Python if you don't have it already
+   3. In the folder this tool is in, download Megatools from your system
       Downloads can be found here: https://megatools.megous.com/builds/builds/
       Extract everything inside to the folder, and name it `megatools`
 
-   3. Open command prompt/terminal in this folder and run the two commands below:
+   4. Open command prompt/terminal in this folder and run the two commands below:
       `pip install google-api-python-client`
       `pip install oauth2client`
 
