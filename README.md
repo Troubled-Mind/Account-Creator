@@ -45,9 +45,9 @@
       Downloads can be found here: https://megatools.megous.com/builds/builds/
       Extract everything inside to the folder, and name it `megatools`
 
-   4. Open command prompt/terminal in this folder and run the two commands below:
-      `pip install google-api-python-client`
-      `pip install oauth2client`
+   4. Open command prompt/terminal in this folder and run the two commands below:    
+      `pip install google-api-python-client`    
+      `pip install oauth2client`    
 
       If you don't have pip, download this file below, and open command prompt to the folder it is in
       and run `python get-pip.py` 
