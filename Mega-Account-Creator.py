@@ -129,10 +129,16 @@ def getVerificationCodeFromEmail(email):
 	service = build('gmail','v1',http=creds.authorize(Http()))
 	# read inbox
 	resultsSize = 0
-	while(resultsSize == 0):
+	i = 0
+	while(resultsSize == 0) or (i < 5):
 		results = service.users().messages().list(userId='me', labelIds = ['INBOX'], q = 'from:welcome@mega.nz,subject:Mega Email Verification Required').execute()
 		if(results['resultSizeEstimate'] > 0):
 			resultsSize = results['resultSizeEstimate']
+		i = i + 1
+		if(i == 5):
+			break
+	if(resultsSize == 0):
+		return ''
 	messages=results.get('messages',[])
 	messageBody = ''	
 	
@@ -175,14 +181,8 @@ def writeEmailToTxtFile(email, password):
 	with open('MegaAccounts.txt', 'a') as f:
 		f.write(email + "@gmail.com, " + password + "\n")
 
+# Main program
 
-# run the function to get first verification code and trigger email
-#firstVerificationCode = register(emailAddress, accountName, password)
-#print("Current email: " + emailAddress)
-#print('Waiting 5s for verification email')
-#time.sleep(5)
-#emailVerificationLink = getVerificationCodeFromEmail('troubledmindtrade+69420lol@gmail.com')
-#verify(firstVerificationCode, emailVerificationLink)
 emails = readFile()
 for email in emails:
 	print("-------- Current Email: " + email + "@gmail.com --------")
@@ -191,7 +191,12 @@ for email in emails:
 	print("    Waiting 5s for verification email...")
 	time.sleep(5)
 	print("    Getting link from email...")
-	emailVerificationLink = getVerificationCodeFromEmail(email + "@gmail.com")
+	i = 0
+	while (emailVerificationLink == '') :
+		i = i + 1
+		print("attempt:")
+		print(i)
+		emailVerificationLink = getVerificationCodeFromEmail(email + "@gmail.com")
 	print("    Got link!")
 	print("    Verifying account...")
 	verify(firstVerificationCode, emailVerificationLink, email + "@gmail.com")
@@ -199,13 +204,12 @@ for email in emails:
 	deleteEmailFromTxtFile(email)
 	print("    Adding " + email + " to MegaAccounts.txt file")
 	writeEmailToTxtFile(email, password)
+	emailVerificationLink = ''
+	firstVerificationCode = ''
 	print("  ")
 	print("  ")
 print("------------------------------------")
 print("Script complete! Check MegaAccounts.txt for all accounts which were created successfully.")
 print("------------------------------------")
-
-
-
 
 
