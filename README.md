@@ -48,6 +48,7 @@
       Downloads can be found here: https://megatools.megous.com/builds/builds/
       Extract everything inside to the folder, and name it `megatools`
    4. Create a txt file called "emails" which you can put all of the emails in
+      This text file should be in the SAME PLACE as Mega-ACcount-Creator.py
    5. Open command prompt/terminal in this folder and run the two commands below:    
       `pip install google-api-python-client`    
       `pip install oauth2client`    
