@@ -1,7 +1,7 @@
   # INSTRUCTIONS:
   # FOLLOW ALL OF THESE, IF YOU GET STUCK, DM ME
   
-  ##[Watch video guide](https://www.youtube.com/watch?v=CNln4hB72wc&feature=youtu.be)
+  ## [Watch video guide](https://www.youtube.com/watch?v=CNln4hB72wc&feature=youtu.be)
 
   
   ## STAGE 1 - Set up your gmail account
