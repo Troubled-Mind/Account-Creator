@@ -74,3 +74,6 @@
 
 
 ###         DO NOT MODIFY ANYTHING ELSE
+.... unless 👀
+
+##### If you're receiving Mega emails in a language other than english, replace the words "Best Regards" with whatever Mega use for your language :) 
