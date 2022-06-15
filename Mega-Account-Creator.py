@@ -90,6 +90,7 @@ SCOPES = "https://www.googleapis.com/auth/gmail.modify"
 
 # the folder that megatools is stored in
 emails = []
+# Make sure this path uses / and not \ anywhere, and it must end with /
 path = "D:/Users/TroubledMind/Documents/Mega-Creator/megatools/"
 accountName = "YOUR ACCOUNT NAME HERE"
 password = "YOUR PASSWORD HERE"
