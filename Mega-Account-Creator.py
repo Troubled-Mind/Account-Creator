@@ -132,7 +132,7 @@ def getVerificationCodeFromEmail(email):
 	resultsSize = 0
 	i = 0
 	while(resultsSize == 0) or (i < 5):
-		results = service.users().messages().list(userId='me', labelIds = ['INBOX'], q = 'from:welcome@mega.nz,subject:Mega Email Verification Required').execute()
+		results = service.users().messages().list(userId='me', labelIds = ['INBOX'], q = 'from:welcome@mega.nz').execute()
 		if(results['resultSizeEstimate'] > 0):
 			resultsSize = results['resultSizeEstimate']
 		i = i + 1
